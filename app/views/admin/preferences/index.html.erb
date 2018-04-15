@@ -1,0 +1,20 @@
+<h1>Preferences</h1>
+<%= form_for @preferences, url: admin_preference_path(@preferences) do |f|%>
+  <%= f.label :song_sort_order %>:<br>
+  <%= f.radio_button :song_sort_order, "ASC" %> ASC </br>
+  <%= f.radio_button :song_sort_order, "DESC" %> DESC </br>
+  </br>
+  <%= f.label :artist_sort_order %>:<br>
+  <%= f.radio_button :artist_sort_order, "ASC" %> ASC </br>
+  <%= f.radio_button :artist_sort_order, "DESC" %> DESC </br>
+  </br>
+  <%= f.label :allow_create_songs %>:<br>
+  <%= f.radio_button :allow_create_songs, true %> Yes </br>
+  <%= f.radio_button :allow_create_songs, false %> No </br>
+  </br>
+  <%= f.label :allow_create_artists %>:<br>
+  <%= f.radio_button :allow_create_artists, true %> Yes </br>
+  <%= f.radio_button :allow_create_artists, false %> No </br>
+
+  <%= f.submit %>
+<%end%>
